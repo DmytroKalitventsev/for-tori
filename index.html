@@ -13,25 +13,23 @@
 
     body {
       font-family: "Arial", sans-serif;
-      scroll-snap-type: y mandatory;
       overflow-y: scroll;
-      height: 100vh;
+      height: auto;
       color: #8a2be2; /* Лавандовий колір */
       text-shadow: 1px 1px 3px rgba(0,0,0,0.25); /* Щоб текст не зливався */
     }
 
     section {
-      height: 100vh;
+      height: 100vh; /* Кожен блок займає висоту екрана */
       display: flex;
       justify-content: center;
       align-items: center;
-      scroll-snap-align: start;
       font-size: 2rem;
       text-align: center;
       padding: 20px;
     }
 
-    /* Фони зробив більш пастельними */
+    /* Фони */
     section:nth-child(1) { background: #f9f1ff; }
     section:nth-child(2) { background: #f5e9ff; }
     section:nth-child(3) { background: #f0ddff; }
@@ -83,13 +81,11 @@
 
   <section>
     <div class="center-text">Сама</div>
-    <!-- Розставлено по колу -->
     <div class="floating" style="top: 10%; left: 50%;">Цінна</div>
-    <div class="floating" style="top: 20%; right: 20%;">Сяюча</div>
+    <div class="floating" style="top: 20%; right: 20%;">Потрібна</div>
     <div class="floating" style="top: 40%; right: 10%;">Особлива</div>
     <div class="floating" style="bottom: 40%; right: 15%;">Любима</div>
     <div class="floating" style="bottom: 20%; right: 35%;">Чудова</div>
-    <div class="floating" style="bottom: 15%; left: 45%;">Потрібна</div>
     <div class="floating" style="bottom: 25%; left: 20%;">Чарівна</div>
     <div class="floating" style="top: 50%; left: 10%;">Красива</div>
     <div class="floating" style="top: 30%; left: 15%;">Важлива</div>
