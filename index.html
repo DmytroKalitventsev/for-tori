@@ -16,6 +16,8 @@
       scroll-snap-type: y mandatory;
       overflow-y: scroll;
       height: 100vh;
+      color: #8a2be2; /* Лавандовий колір */
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.25); /* Щоб текст не зливався */
     }
 
     section {
@@ -29,33 +31,33 @@
       padding: 20px;
     }
 
-    /* Різні кольори екранів */
-    section:nth-child(1) { background: #ffe4ec; }
-    section:nth-child(2) { background: #fff0f6; }
-    section:nth-child(3) { background: #ffeaea; }
-    section:nth-child(4) { background: #fffdf0; position: relative; overflow: hidden; }
-    section:nth-child(5) { background: #eafaff; }
-    section:nth-child(6) { background: #f3e8ff; flex-direction: column; }
+    /* Фони зробив більш пастельними */
+    section:nth-child(1) { background: #f9f1ff; }
+    section:nth-child(2) { background: #f5e9ff; }
+    section:nth-child(3) { background: #f0ddff; }
+    section:nth-child(4) { background: #ede0ff; position: relative; overflow: hidden; }
+    section:nth-child(5) { background: #f4ecff; }
+    section:nth-child(6) { background: #e9dbff; flex-direction: column; }
 
     /* Четвертий екран */
     .center-text {
       font-size: 2.5rem;
       font-weight: bold;
       z-index: 2;
+      position: relative;
     }
 
     .floating {
       position: absolute;
       font-size: 1.2rem;
-      color: #ff4d6d;
       animation: float 8s infinite ease-in-out;
     }
 
     @keyframes float {
       0% { transform: translate(0, 0); }
-      25% { transform: translate(30px, -40px); }
-      50% { transform: translate(-20px, 20px); }
-      75% { transform: translate(-40px, -30px); }
+      25% { transform: translate(20px, -30px); }
+      50% { transform: translate(-25px, 20px); }
+      75% { transform: translate(-30px, -20px); }
       100% { transform: translate(0, 0); }
     }
 
@@ -75,25 +77,26 @@
 <body>
   <section>Моя TORI</section>
 
-  <section>Хочу Тобі<br>Нагадати</section>
+  <section>Хочу тобі<br>нагадати</section>
 
-  <section>Що ти<br>У мене</section>
+  <section>Що ти<br>у мене</section>
 
   <section>
     <div class="center-text">Сама</div>
-    <div class="floating" style="top: 20%; left: 10%;">Цінна</div>
-    <div class="floating" style="top: 30%; right: 15%;">Сяюча</div>
-    <div class="floating" style="bottom: 25%; left: 20%;">Особлива</div>
-    <div class="floating" style="top: 60%; right: 20%;">Любима</div>
-    <div class="floating" style="bottom: 20%; right: 10%;">Чудова</div>
-    <div class="floating" style="top: 15%; left: 40%;">Потрібна</div>
-    <div class="floating" style="bottom: 15%; left: 30%;">Чарівна</div>
-    <div class="floating" style="top: 40%; left: 5%;">Красива</div>
-    <div class="floating" style="bottom: 35%; right: 25%;">Важлива</div>
-    <div class="floating" style="top: 50%; right: 40%;">Добра</div>
+    <!-- Розставлено по колу -->
+    <div class="floating" style="top: 10%; left: 50%;">Цінна</div>
+    <div class="floating" style="top: 20%; right: 20%;">Сяюча</div>
+    <div class="floating" style="top: 40%; right: 10%;">Особлива</div>
+    <div class="floating" style="bottom: 40%; right: 15%;">Любима</div>
+    <div class="floating" style="bottom: 20%; right: 35%;">Чудова</div>
+    <div class="floating" style="bottom: 15%; left: 45%;">Потрібна</div>
+    <div class="floating" style="bottom: 25%; left: 20%;">Чарівна</div>
+    <div class="floating" style="top: 50%; left: 10%;">Красива</div>
+    <div class="floating" style="top: 30%; left: 15%;">Важлива</div>
+    <div class="floating" style="top: 15%; left: 30%;">Добра</div>
   </section>
 
-  <section>Жоден мій день<br>Не обходиться<br>Без думки про тебе</section>
+  <section>Жоден мій день<br>не обходиться<br>без думки про тебе</section>
 
   <section>
     <div class="date">06.07.2025</div>
