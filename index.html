@@ -16,11 +16,11 @@
       overflow-y: scroll;
       height: auto;
       color: #8a2be2; /* Лавандовий колір */
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.25); /* Щоб текст не зливався */
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.25);
     }
 
     section {
-      height: 100vh; /* Кожен блок займає висоту екрана */
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -33,42 +33,28 @@
     section:nth-child(1) { background: #f9f1ff; }
     section:nth-child(2) { background: #f0ddff; }
     section:nth-child(3) { background: #f5e9ff; }
-    section:nth-child(4) { background: #ede0ff; position: relative; overflow: hidden; }
+    section:nth-child(4) { background: #ede0ff; }
     section:nth-child(5) { background: #f4ecff; }
     section:nth-child(6) { background: #e9dbff; flex-direction: column; }
 
-    /* Четвертий екран */
+    /* Четвертий екран — квадрат */
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 20px;
+      width: 100%;
+      height: 100%;
+      justify-items: center;
+      align-items: center;
+      font-size: 1.2rem;
+    }
+
     .center-text {
       font-size: 2.5rem;
       font-weight: bold;
-      z-index: 2;
-      position: relative;
-    }
-
-    .floating {
-      position: absolute;
-      font-size: 1.2rem;
-      animation: float 8s infinite ease-in-out;
-    }
-
-    @keyframes float {
-      0% { transform: translate(0, 0); }
-      25% { transform: translate(20px, -30px); }
-      50% { transform: translate(-25px, 20px); }
-      75% { transform: translate(-30px, -20px); }
-      100% { transform: translate(0, 0); }
-    }
-
-    /* Шостий екран (дата + картинка) */
-    .date {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .image {
-      max-width: 80%;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      grid-column: 2;
+      grid-row: 2;
     }
   </style>
 </head>
@@ -80,22 +66,23 @@
   <section>Що ти<br>у мене</section>
 
   <section>
-    <div class="center-text">Сама</div>
-    <div class="floating" style="top: 10%; left: 50%;">Цінна</div>
-    <div class="floating" style="top: 20%; right: 20%;">Потрібна</div>
-    <div class="floating" style="top: 40%; right: 10%;">Особлива</div>
-    <div class="floating" style="bottom: 40%; right: 15%;">Любима</div>
-    <div class="floating" style="bottom: 20%; right: 35%;">Чудова</div>
-    <div class="floating" style="bottom: 25%; left: 20%;">Чарівна</div>
-    <div class="floating" style="top: 50%; left: 10%;">Красива</div>
-    <div class="floating" style="top: 30%; left: 15%;">Важлива</div>
-    <div class="floating" style="top: 15%; left: 30%;">Добра</div>
+    <div class="grid-container">
+      <div>Цінна</div>
+      <div>Потрібна</div>
+      <div>Особлива</div>
+      <div>Чудова</div>
+      <div class="center-text">Сама</div>
+      <div>Любима</div>
+      <div>Красива</div>
+      <div>Важлива</div>
+      <div>Добра</div>
+    </div>
   </section>
 
   <section>Жоден мій день<br>не обходиться<br>без думки про тебе</section>
 
   <section>
-    <div class="date">06.07.2025</div>
+    <div class="date">06.07.2025 ❤️</div>
     <img src="peachgoma.png" alt="Фото" class="image">
   </section>
 </body>
