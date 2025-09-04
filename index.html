@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Моя TORI</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Arial", sans-serif;
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+      height: 100vh;
+    }
+
+    section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      scroll-snap-align: start;
+      font-size: 2rem;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Різні кольори екранів */
+    section:nth-child(1) { background: #ffe4ec; }
+    section:nth-child(2) { background: #fff0f6; }
+    section:nth-child(3) { background: #ffeaea; }
+    section:nth-child(4) { background: #fffdf0; position: relative; overflow: hidden; }
+    section:nth-child(5) { background: #eafaff; }
+    section:nth-child(6) { background: #f3e8ff; flex-direction: column; }
+
+    /* Четвертий екран */
+    .center-text {
+      font-size: 2.5rem;
+      font-weight: bold;
+      z-index: 2;
+    }
+
+    .floating {
+      position: absolute;
+      font-size: 1.2rem;
+      color: #ff4d6d;
+      animation: float 8s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0% { transform: translate(0, 0); }
+      25% { transform: translate(30px, -40px); }
+      50% { transform: translate(-20px, 20px); }
+      75% { transform: translate(-40px, -30px); }
+      100% { transform: translate(0, 0); }
+    }
+
+    /* Шостий екран (дата + картинка) */
+    .date {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .image {
+      max-width: 80%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <section>Моя TORI</section>
+
+  <section>Хочу Тобі<br>Нагадати</section>
+
+  <section>Що ти<br>У мене</section>
+
+  <section>
+    <div class="center-text">Сама</div>
+    <div class="floating" style="top: 20%; left: 10%;">Цінна</div>
+    <div class="floating" style="top: 30%; right: 15%;">Сяюча</div>
+    <div class="floating" style="bottom: 25%; left: 20%;">Особлива</div>
+    <div class="floating" style="top: 60%; right: 20%;">Любима</div>
+    <div class="floating" style="bottom: 20%; right: 10%;">Чудова</div>
+    <div class="floating" style="top: 15%; left: 40%;">Потрібна</div>
+    <div class="floating" style="bottom: 15%; left: 30%;">Чарівна</div>
+    <div class="floating" style="top: 40%; left: 5%;">Красива</div>
+    <div class="floating" style="bottom: 35%; right: 25%;">Важлива</div>
+    <div class="floating" style="top: 50%; right: 40%;">Добра</div>
+  </section>
+
+  <section>Жоден мій день<br>Не обходиться<br>Без думки про тебе</section>
+
+  <section>
+    <div class="date">06.07.2025</div>
+    <img src="https://placekitten.com/400/400" alt="Фото" class="image">
+  </section>
+</body>
+</html>
